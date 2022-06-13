@@ -1,10 +1,51 @@
-from .read import AudioReader, ImageReader
-from .write import AudioWriter, ImageWriter
+"""Create and read files with data hidden inside them through Steganography
+Supported files:
+    Standard:
+        wav
+        png
+        gif
+    If you install PIL
+        jpg
+        bmp
+        (most other image formats)
+
+Functions:
+
+    cli() -> (None)
+
+Misc variables:
+
+    __all__
+    __author__
+    __version__
+    supported_from
+
+Other Info:
+    Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to
+    avoid detection; the secret data is then extracted at its destination. The use of steganography can be combined with
+    encryption as an extra step for hiding or protecting data.
+"""
+
+__all__ = ["cli"]
+__author__ = "Alexander Bisland"
+__version__ = "1.1.2"
+supported_from = "3.8.1"
+
+from StegaSaurus.read import AudioReader, ImageReader
+from StegaSaurus.write import AudioWriter, ImageWriter
 import argparse
 import os
 
 
-def cli():
+def cli() -> None:
+    """Create and read files with data hidden inside them through Steganography
+
+        Parameters:
+            (None)
+
+        Returns:
+            Nothing (None): Null
+    """
     parser = argparse.ArgumentParser(description='(Optionally) Dependency-free library for steganography')
     parser.add_argument('input', type=argparse.FileType('r'), help='Input file path')
     parser.add_argument('--read', '-r', dest='option', action='store_const',
