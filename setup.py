@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="StegaSaurus",
-    version="1.0.4",
+    version="1.1.0",
     entry_points={'console_scripts': ['StegaSaurus=StegaSaurus.cli:cli'], },
     author="Alexander Bisland",
     author_email="biztecbritain@gmail.com",

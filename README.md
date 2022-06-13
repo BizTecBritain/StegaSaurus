@@ -102,9 +102,9 @@ To get a local copy up and running follow these simple steps.
 
 ## Usage
 
-This can be used as a library (see documentation) or run from the command line
+This can be used as a library (see documentation) or run from the command line (you need to add to PATH)
 ```
-$ cli.py [-h] [--read] [--write] [--audio] [--image] [--no-output] [--output OUTPUT] [--data DATA] [--depth DEPTH] [--raw RAW] input
+$ StegaSaurus.exe [-h] [--read] [--write] [--audio] [--image] [--no-output] [--output OUTPUT] [--data DATA] [--depth DEPTH] [--raw RAW] input
 
 positional arguments:
   input                 Input file path
@@ -123,6 +123,8 @@ optional arguments:
   --raw RAW             Raw data for if data file is not used
 
 ```
+
+When using images it is not possible to write out to a gif as they can only include a limited amount of colours
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
